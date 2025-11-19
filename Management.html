@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ฝ่ายบริหารทรัพยากร</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      background-color: #f3f6fa;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .back-btn {
+      background: white;
+      color: #2563eb;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .back-btn:hover {
+      background: #e0e7ff;
+    }
+
+    /* Content */
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 40px 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e3a8a;
+      font-size: 24px;
+    }
+
+    /* Cards */
+    .section-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+      justify-items: center;
+    }
+
+    .section-card {
+      background: #f9fafb;
+      border-radius: 14px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 260px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .section-card:hover {
+      background: #e0f2fe;
+      transform: translateY(-5px);
+    }
+
+    .section-card i {
+      font-size: 32px;
+      color: #2563eb;
+      margin-bottom: 12px;
+    }
+
+    .section-card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #1e40af;
+    }
+
+    .section-card p {
+      font-size: 13px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="image/sbtclogo.jpg" alt="Logo" class="logo">
+      <div class="title">
+        <h2>ระบบงานเอกสาร วิทยาลัยเทคนิคสิงห์บุรี</h2>
+        <p>Singburi Technical College Document Portal</p>
+      </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='index.html'">
+      <i class="fas fa-arrow-left"></i> กลับหน้าหลัก
+    </button>
+  </header>
+
+  <div class="content">
+    <h2>งานในฝ่ายบริหารทรัพยากร</h2>
+
+    <div class="section-list">
+
+      <div class="section-card">
+        <i class="fas fa-users"></i>
+        <h3>งานบุคลากร</h3>
+        <p>ดูแลบุคลากร การบรรจุแต่งตั้ง และข้อมูลบุคลากรทั้งหมด</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-money-bill-wave"></i>
+        <h3>งานการเงิน</h3>
+        <p>บริหารงบประมาณ รายรับ-รายจ่ายของสถานศึกษา</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-box"></i>
+        <h3>งานพัสดุ</h3>
+        <p>จัดซื้อจัดจ้าง ครุภัณฑ์ และวัสดุต่างๆ</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-building"></i>
+        <h3>งานอาคารสถานที่</h3>
+        <p>ดูแลอาคาร ห้องเรียน และสิ่งอำนวยความสะดวก</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-id-card"></i>
+        <h3>งานทะเบียน</h3>
+        <p>ดูแลระบบทะเบียนนักเรียน/นักศึกษา และผลการเรียน</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>งานประชาสัมพันธ์</h3>
+        <p>เผยแพร่ข้อมูล ข่าวสาร และกิจกรรมของสถานศึกษา</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-book"></i>
+        <h3>งานบัญชี</h3>
+        <p>จัดทำบัญชี ตรวจสอบรายรับรายจ่ายตามมาตรฐาน</p>
+      </div>
+
+      <div class="section-card">
+        <i class="fas fa-flag"></i>
+        <h3>สำนักงานอาชีวศึกษาจังหวัด</h3>
+        <p>ประสานงานระดับจังหวัดด้านอาชีวศึกษา</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 ฝ่ายบริหารทรัพยากร วิทยาลัยเทคนิคสิงห์บุรี — Singburi Technical College Document Portal
+  </footer>
+
+</body>
+</html>
