@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>งานเอกสาร วิทยาลัยเทคนิคสิงห์บุรี</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="image/sbtclogo.jpg" alt="Logo" class="logo">
+      <div class="title">
+        <h2>ระบบงานเอกสาร วิทยาลัยเทคนิคสิงห์บุรี</h2>
+        <p>College Document Portal</p>
+      </div>
+    </div>
+    <a href="http://localhost/Project-College-Document-Portal/login.php/" class="login-btn">Login</a>
+
+
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <h1>ยินดีต้อนรับสู่ระบบ</h1>
+    <p class="subtitle">
+      ที่นี่จะแสดงเอกสารในแต่ละฝ่ายแต่ละงานให้ผู้ใช้สามารถเลือก Downloads ได้เลย
+    </p>
+
+    <div class="card-container">
+      <div class="card" onclick="window.location.href='hr.html'">
+        <div class="icon">📘</div>
+        <h3>ฝ่ายบริหารทรัพยากร</h3>
+        <!-- <p>งานบริหารทั่วไป, งานบุคลากร, งานการเงิน, งานพัสดุ, งานอาคารสถานที่, งานอาคารสถานที่
+            ,งานทะเบียน,งานประชาสัมพันธ์,งานบัญชี.</p> -->
+      </div>
+
+      <div class="card" onclick="window.location.href='planning.html'">
+        <div class="icon">📋</div>
+        <h3>ฝ่ายแผนและความร่วมมือ</h3>
+        <!--<p>ยังไม่ได้ใส่ข้อมูล</p>-->
+      </div>
+
+      <div class="card" onclick="window.location.href='affairs .html'">
+        <div class="icon">👥</div>
+        <h3> ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</h3>
+        <!--<p>ยังไม่ได้ใส่ข้อมูล</p> -->
+      </div>
+
+      <div class="card"  onclick="window.location.href='academic.html'">
+        <div class="icon">📘</div>
+        <h3>ฝ่ายวิชาการ</h3>
+        <!--<p>ยังไม่ได้ใส่ข้อมูล</p>-->
+      </div>
+    </div>
+  </main>
+
+  <!-- Quick Information Section -->
+<section class="info-section">
+  <div class="info-container">
+    <h2>Quick Information</h2>
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="icon-box blue">
+          <i class="fas fa-book"></i>
+        </div>
+        <h3>จำนวนเอกสารทั้งหมด</h3>
+        <p class="count">0</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-box green">
+          <i class="fas fa-user"></i>
+        </div>
+        <h3>ยอดผู้ชมทั้งหมด</h3>
+        <p class="count">0</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-box purple">
+          <i class="fas fa-clipboard"></i>
+        </div>
+        <h3>ยอดดาวน์โหลดทั้งหมด</h3>
+        <p class="count">1</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="content">
+    <?php if (isset($_SESSION['success'])) : ?>
+    <div class="success">
+        <h3>
+            <?php 
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            ?>
+        </h3>
+        </div>
+    <?php endif ?>
+
+    <?php if (isset($_SESSION['username'])) : ?>
+    <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    <p><a href="index.php?logout='1'" style="color: red;">Logout</a></p>
+    <?php endif ?>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    ผู้เข้าชม: <span id="visitors">0</span> | ยอดดาวน์โหลด: <span id="downloads">0</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
